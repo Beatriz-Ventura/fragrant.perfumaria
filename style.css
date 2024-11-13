@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;0,8..60,600;1,8..60,200..900&display=swap');
+
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Serif Display", serif;
+    
+}
+
+body{
+    background-color: #000;
+    height: 100vh;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #D6E1E6;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+h2.titulo{
+    color:#FFF;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #4D7D95 ;
+}
+
+button:hover{
+    box-shadow: 0px 0px 8px #4D7D95;
+    transform: scale(1.05);
+}
+/* CABECALHO */
+header{
+    padding: 40px 4%;
+    
+}
+
+header > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+header a{
+    color: #FFF;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover{
+    color:#FFF;
+    transform: scale(1.05);
+}
+header nav ul{
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #4D7D95;
+}
+
+.menu-mobile{
+    overflow: hidden;
+}
+
+nav ul li .nav-item{
+    overflow: hidden;
+}
+
+/* ESTILO DO MOBILE */
+ 
+/* @media (max-width: 320px){ */
+    
+
+.btn-abrir-menu i{
+    color: #4D7D95;
+    font-size: 40px;
+}
+
+.btn-abrir-menu{
+    display: none;
+}
+
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile.-abrir-menu{
+    width: 70%;
+}
+.menu-mobile.abrir-menu {
+    padding: 70px 50%;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 4%;
+    cursor: pointer;
+}
+
+
+.menu-mobile .btn-fechar i{
+   color: #4D7D95;
+   font-size: 30px; 
+}
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #4D7D95;
+    color: #000;
+}
+
+.overlay-menu{
+    background-color: #000000df;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
+/* } */
+
+ 
+/* ESTILO DO TOPO */
+
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #FFF;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .text-topo-site h1 span{
+    color: #4D7D95;
+}
+
+.topo-do-site .text-topo-site p{
+    color: #FFF;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;  
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+
+    100%{ 
+        top:30px;
+    }
+}
+    
+/* ESTILO DO ECOMMERCE */
+
+section.ecommerce{
+    padding: 40px 4%;
+
+}
+
+section.ecommerce .flex{
+    gap: 60px;
+    justify-content: center;
+}
+.ecommerce .especialidades-box{
+    color: #FFF;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: .2s;
+    justify-content: space-between;
+    
+
+}
+
+.ecommerce .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff78;
+}
+
+.ecommerce .especialidades-box i{
+    font-size: 70px;
+    color: #4D7D95;
+}
+
+.ecommerce .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+
+/* ESTILO SOBRE */
+
+section.sobre{
+    padding: 80px 4%; 
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .text-sobre{
+    color: #FFF;
+}
+
+.sobre .text-sobre h2{
+   font-size: 40px; 
+   line-height: 40px;
+   margin-bottom: 30px;
+}
+
+.sobre .text-sobre h2 span{
+    color: #4D7D95;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #4D7D95;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.sobre .text-sobre .btn-social{
+    margin: 40px 0;
+}
+
+/* ESTILO DOS BESTSELLERS */
+
+
+section.bestsellers{
+    padding: 80px 4%;
+    box-shadow: 00 40px #ffffff1d;
+}
+
+.bestsellers .interface{
+    color: #FFF;
+    text-align: center;
+    line-height: 40px;
+
+}
+
+section.bestsellers .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+
+.flex .subtitulo p{
+    color: #FFF;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.bestsellers .interface .flex a{
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 400;
+    border: 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .2s;
+    opacity: 100;
+    list-style-type: none;
+    color: #000;
+}
+
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-color: #4D7D95;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+estatico{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4D7D95;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFF;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.estatico:hover{
+    opacity: 1;
+}
+
+/* ESTILO DO RODAPE */
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex{
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 1020px) {
+    
+    /* GERAL */
+
+    .flex{
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+    h2.titulo {
+        font-size: 34px;
+        line-height:  30px;
+    }
+
+    /* CABECALHO */
+
+    .btn-abrir-menu{
+        display: block;
+    }
+
+    .menu-desktop,
+     .btn-contato{
+        display: none;
+    }
+
+    /* TOPO DO SITE */
+
+    section.topo-do-site .flex{
+        gap: 40px;
+    }
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+    .topo-do-site h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+
+
+/* ECOMMERCE */
+
+section.ecommerce{
+    padding: 40px 8%;
+
+}
+
+/* SOBRE */
+
+section.sobre{
+    padding: 80px 4%; 
+}
+
+.sobre .text-sobre h2{
+    font-size: 34px; 
+    line-height: 35px;
+    text-align: center;
+ }
+
+ .btn-social{
+    text-align: center;
+ }
+
+ .img-sobre img{
+    width: 100%;
+ }
+
+ /* BESTSELLERS */
+
+ section.bestsellers{
+    padding: 80px 4%;
+    box-shadow: 00 40px #ffffff1d;
+}
+
+.img-port{
+    width: 100%;
+    height: 360px;
+    margin: 0 auto;
+}
+
+section.bestsellers .flex{
+    gap: 60px;
+}
+
+footer .flex{
+    flex-direction: column;
+}
+
+footer .line-footer{
+    text-align: center;
+}
+
+}
